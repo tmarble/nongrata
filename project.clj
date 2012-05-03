@@ -4,6 +4,6 @@
                  [javax.mail/mail "1.4.2"]
                  [noir "1.3.0-beta3"]]
   :dev-dependencies [[lein-eclipse "1.0.0"]]
-  :jvm-opts ["-server -Xmx512m"] 
+  :jvm-opts ["-server"] 
   :main nongrata.server)
 

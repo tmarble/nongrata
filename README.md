@@ -8,6 +8,7 @@ and Clojure (with Noir)
 
 * tmarble
 * nickbauman
+* bmaddy
 
 ## License
 

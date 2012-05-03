@@ -10,6 +10,14 @@ and Clojure (with Noir)
 * nickbauman
 * bmaddy
 
+## Jenkins
+
+Jenkins is is running at Informatique, Inc. and rebuilding on every commit.
+
+The *live* version of this code is pushed automatically to:
+
+** http://nongrata.info9.net:11300/ **
+
 ## License
 
 Copyright (C) 2012 Tom Marble and contributors from Clojure MN

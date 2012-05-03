@@ -6,13 +6,14 @@
   :dev-dependencies [[lein-eclipse "1.0.0"]]
   :plugins [[lein-cljsbuild "0.1.8"]]
   :cljsbuild {
-     :builds [{
-        ; The path to the top-level ClojureScript source directory:
-        :source-path "src-cljs"
-        ; The standard ClojureScript compiler options:
-        ; (See the ClojureScript compiler documentation for details.)
-        :compiler {
-          :output-to "war/javascripts/main.js"  ; default: main.js in current directory
-          :optimizations :whitespace
-          :pretty-print true}}]}
-  :main nongrata.server ) ;; please keep the space after the class name
+              :builds [{
+                        ; The path to the top-level ClojureScript source directory:
+                        :source-path "src-cljs"
+                        ; The standard ClojureScript compiler options:
+                        ; (See the ClojureScript compiler documentation for details.)
+                        :compiler {
+                                   :output-to "war/javascripts/main.js"  ; default: main.js in current directory
+                                   :optimizations :whitespace
+                                   :pretty-print true}}]}
+  :jvm-opts ["-server"] 
+  :main nongrata.server)

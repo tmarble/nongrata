@@ -13,6 +13,7 @@
                         ; (See the ClojureScript compiler documentation for details.)
                         :compiler {
                                    :output-to "resources/js/main.js"  ; default: main.js in current directory
+                                   :externs ["externs/jquery.js"],
                                    :optimizations :whitespace
                                    :pretty-print true}}]}
   :jvm-opts ["-server"] 

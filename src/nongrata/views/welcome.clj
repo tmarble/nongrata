@@ -9,5 +9,6 @@
          (common/layout
            [:p 
             (if (not (session/get "browser-id"))
-              [:a {"href" "#"} "sign in"]
+              [:a {"href" "#" "id" "browserid" "title" "Sign-in with BrowserID"} 
+               [:img {"src" "/images/sign_in_blue.png" "alt" "Sign in"}]]
               "You are signed in!")]))

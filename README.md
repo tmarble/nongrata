@@ -1,14 +1,15 @@
 # nongrata
 
 This is the live coding site for the Clojure Minnesota 5/2 meeting to better 
-understand Persona (BrowserID) and Clojure (with Noir).
+understand Persona (BrowserID) and Clojure / Clojurescript (with Noir).
 
 Persona (BrowserID) aims to be a better, more usable and more privacy-conscious
-implementation of OpenID.
+implementation of OpenID. You can find out more at [BrowserID Project Documentation at MDN](https://developer.mozilla.org/en/BrowserID#The_BrowserID_Project)
 
-[BrowserID Project Documentation at MDN](https://developer.mozilla.org/en/BrowserID#The_BrowserID_Project)
+Clojurescript event handling is another topic this is trying to address here. 
+More about this can be found at the [Clojurescript One Event Handling docs] (https://github.com/brentonashworth/one/wiki/Event-dispatching).
 
-Noir is [Chris Granger's](https://github.com/ibdknox) web development library which uses Ring and Compojure.
+Finally, [Noir](https://github.com/ibdknox/webnoir) is [Chris Granger's](https://github.com/ibdknox) web development library which uses Ring and Compojure.
 
 ## Contributors
 

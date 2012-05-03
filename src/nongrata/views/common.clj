@@ -6,6 +6,7 @@
             (html5
               [:head
                [:title "nongrata"]
+               (include-js "https://browserid.org/include.js")
                (include-css "/css/reset.css")]
               [:body
                [:div#wrapper

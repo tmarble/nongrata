@@ -13,7 +13,7 @@
                         ; The standard ClojureScript compiler options:
                         ; (See the ClojureScript compiler documentation for details.)
                         :compiler {
-                                   :output-to "resources/js/main.js"  ; default: main.js in current directory
+                                   :output-to "resources/public/js/main.js"  ; default: main.js in current directory
                                    :externs ["externs/jquery.js"],
                                    :optimizations :whitespace
                                    :pretty-print true}}]}

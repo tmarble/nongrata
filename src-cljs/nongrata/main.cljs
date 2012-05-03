@@ -1,4 +1,5 @@
-(ns nongrata.main)
+(ns nongrata.main
+  (:use [jayq.core :only [$ css inner]]))
 
 
 ;; $(function() {

@@ -9,3 +9,4 @@ dist
 hs_err_pid*.log
 lib
 .lein*
+resources/public/js

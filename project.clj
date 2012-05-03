@@ -21,4 +21,4 @@
                                    :optimizations :whitespace
                                    :pretty-print true}}]}
   :jvm-opts ["-server"] 
-  :main nongrata.server)
+  :main nongrata.server ) ;; please keep the space after the class name

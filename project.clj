@@ -16,5 +16,13 @@
                                    :optimizations :whitespace
                                    :pretty-print true}}]}
   :jvm-opts ["-server"] 
-  :main nongrata.server)
-
+  :main nongrata.server
+  :plugins [[lein-cljsbuild "0.1.8"]]
+  :cljsbuild
+  {:builds
+  [{:source-path "src-cljs",
+                 :compiler
+                 {:output-to "resources/public/js/cljs.js",
+                 :externs ["externs/jquery.js"],
+                 :optimizations :simple,
+                 :pretty-print true}}]})

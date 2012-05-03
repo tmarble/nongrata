@@ -7,7 +7,7 @@ and Clojure (with Noir)
 ## Contributors
 
 * tmarble
-* *your name here*
+* nickbauman
 
 ## License
 

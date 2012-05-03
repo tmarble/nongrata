@@ -10,3 +10,5 @@ hs_err_pid*.log
 lib
 .lein*
 war/javascripts
+*.jar
+

@@ -1,14 +1,21 @@
 # nongrata
 
-This is the live coding site for the Clojure Minnesota
-5/2 meeting to better understand Persona (Browser ID)
-and Clojure (with Noir)
+This is the live coding site for the Clojure Minnesota 5/2 meeting to better 
+understand Persona (BrowserID) and Clojure (with Noir).
+
+Persona (BrowserID) aims to be a better, more usable and more privacy-conscious
+implementation of OpenID.
+
+[BrowserID Project Documentation at MDN](https://developer.mozilla.org/en/BrowserID#The_BrowserID_Project)
+
+Noir is [Chris Granger's](https://github.com/ibdknox) web development library which uses Ring and Compojure.
 
 ## Contributors
 
 * tmarble
 * nickbauman
 * bmaddy
+* others from Clojure.MN who haven't updated this file
 
 ## Jenkins
 

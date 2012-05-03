@@ -12,3 +12,4 @@ lib
 .lein*
 war/javascripts
 resources/js/main.js
+resources/public/js/main.js

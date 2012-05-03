@@ -10,4 +10,4 @@
               [:body
                [:div#wrapper
                 content]
-               (include-js "/js/cljs.js")]))
+               (include-js "/js/main.js")]))

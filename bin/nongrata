@@ -24,7 +24,6 @@ NULL_DEVICE=/dev/null
 ###############
 
 getversion() {
-  set -x
   if [ -e project.clj ]; then
     VERSION=$(head -1 project.clj | cut -d\" -f2)
     JAR=$PROGRAM-$VERSION.jar
@@ -44,7 +43,6 @@ rejar() {
 }
 
 start() {
-  set -x
   getversion
   if [ ! -e "$JAR" ]; then
     rejar
@@ -70,12 +68,12 @@ start() {
     jargs="-Xms128M -Xmx256M"
     # jargs="-Xms256m -Xmx512m"
     jargs="$jargs -Dproject.version=$VERSION"
-    jargs="$jargs -Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
+    # jargs="$jargs -Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
     # NOTE: use the following when you want to connect with jdb
     # jargs="$jargs -agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=y"
     cp=$(find lib -name '*.jar' -printf "%p:")
     cp="${cp}$JAR"
-    clj="(use $main)(apply -main *command-line-args*)"
+    clj="(use '$main)(apply -main *command-line-args*)"
     #echo java $jargs -cp "$cp" clojure.main -e "$clj" $NULL_DEVICE $args
     if [ "$cmd" != "run" ]; then
       echo "Starting $PROGRAM..."

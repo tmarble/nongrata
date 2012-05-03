@@ -11,3 +11,5 @@ lib
 .lein*
 resources/public/js
 war
+*.jar
+

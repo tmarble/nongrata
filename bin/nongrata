@@ -39,6 +39,8 @@ rejar() {
   getversion
   # DEFENSIVE CODING: force clean
   lein clean
+  lein deps
+  lein cljsbuild once
   LEIN_SNAPSHOTS_IN_RELEASE=true lein jar
 }
 

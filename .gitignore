@@ -4,6 +4,7 @@
 *.project
 *.settings
 *~
+*.swp
 build
 dist
 hs_err_pid*.log

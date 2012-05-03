@@ -5,5 +5,6 @@
                  [noir "1.3.0-beta3"]]
   :dev-dependencies [[lein-eclipse "1.0.0"]]
   :jvm-opts ["-server"] 
-  :main nongrata.server)
+  :main nongrata.server ) ;; please keep the space after the class name
+
 

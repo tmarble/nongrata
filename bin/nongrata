@@ -68,7 +68,7 @@ start() {
     jargs="-Xms128M -Xmx256M"
     # jargs="-Xms256m -Xmx512m"
     jargs="$jargs -Dproject.version=$VERSION"
-    jargs="$jargs -Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
+    # jargs="$jargs -Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
     # NOTE: use the following when you want to connect with jdb
     # jargs="$jargs -agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=y"
     cp=$(find lib -name '*.jar' -printf "%p:")

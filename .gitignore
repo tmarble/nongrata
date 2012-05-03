@@ -7,3 +7,5 @@
 build
 dist
 hs_err_pid*.log
+lib
+.lein*

@@ -5,10 +5,10 @@
   (:use [noir.core :only [defpage]]
         [hiccup.core :only [html]]))
 
-(defpage "/welcome" []
+(defpage welcome "/welcome" []
          (common/layout
            [:p 
             (if (not (session/get "browser-id"))
               [:a {"href" "#" "id" "browserid" "title" "Sign-in with BrowserID"} 
-               [:img {"src" "/images/sign_in_blue.png" "alt" "Sign in"}]]
+               [:img {"src" "/img/sign_in_blue.png" "alt" "Sign in"}]]
               "You are signed in!")]))

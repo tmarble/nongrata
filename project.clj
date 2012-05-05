@@ -1,5 +1,5 @@
 (defproject nongrata "0.1.0-SNAPSHOT"
-  :description "Mozilla Persona (BrowserID) example using Noir"
+  :description "Mozilla Persona (BrowserID) example using Noir and Clojurescript"
   :dependencies [[org.clojure/clojure "1.4.0"]
                  [javax.mail/mail "1.4.2"]
                  [noir "1.3.0-beta3"]
@@ -17,8 +17,7 @@
                         ; The standard ClojureScript compiler options:
                         ; (See the ClojureScript compiler documentation for details.)
                         :compiler {
-                                   :output-to "resources/public/js/main.js"  ; default: main.js in current directory
+                                   :output-to "resources/public/js/main.js" ; default: main.js in current directory
                                    :optimizations :whitespace
                                    :pretty-print true}}]}
-  :jvm-opts ["-server"] 
   :main nongrata.server ) ;; please keep the space after the class name

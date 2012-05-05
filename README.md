@@ -7,7 +7,9 @@ Persona (BrowserID) aims to be a better, more usable and more privacy-conscious
 implementation of OpenID. You can find out more at [BrowserID Project Documentation at MDN](https://developer.mozilla.org/en/BrowserID#The_BrowserID_Project)
 
 Clojurescript event handling is another topic this is trying to address here. 
-More about this can be found at the [Clojurescript One Event Handling docs] (https://github.com/brentonashworth/one/wiki/Event-dispatching).
+* Setting up with Clojurescript with the [Clojurescript quick start](https://github.com/clojure/clojurescript/wiki/Quick-Start)
+* Dom manipulation samples [Can be found here](https://github.com/clojure/clojurescript/blob/master/samples/dom/src/dom/test.cljs)
+* More about event handling can be found at the [Clojurescript One Event Handling docs] (https://github.com/brentonashworth/one/wiki/Event-dispatching).
 
 Finally, [Noir](https://github.com/ibdknox/webnoir) is [Chris Granger's](https://github.com/ibdknox) web development library which uses Ring and Compojure.
 

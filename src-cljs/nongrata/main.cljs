@@ -8,10 +8,14 @@
 (defn log-obj [obj]
   (.log js/console obj))
 
-; Using jayq, do this with jquery...
-; $("#signin-img").bind('click', function() { alert("button clicked!"); });
-(.bind ($ "#signin-img") "click" (fn[] (js/alert "button clicked!")))
+(defn gotAssertion
+  [assertion]
+  (js/alert (str "callback invoked: " assertion)))
 
-; If we got here, everything should be good
-(js/alert "JS Code compiled and running 5...")
+(.bind ($ "#browserid") "click" (fn[evt] (js/alert (str "button clicked! event: " evt))
+                                  (do                       
+                                    navigator.id/get(gotAssertion)  
+                                    false)))  
+                                  
+(js/alert "JS evaluation reached bottom of the main.js file...")
 

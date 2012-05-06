@@ -18,6 +18,6 @@
                         ; (See the ClojureScript compiler documentation for details.)
                         :compiler {
                                    :output-to "resources/public/js/main.js" ; default: main.js in current directory
-                                   :optimizations :whitespace
+                                   :optimizations :simple
                                    :pretty-print true}}]}
   :main nongrata.server ) ;; please keep the space after the class name

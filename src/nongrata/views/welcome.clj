@@ -10,5 +10,5 @@
            [:p 
             (if (not (session/get "browser-id"))
               [:a {"href" "#" "id" "browserid" "title" "Sign-in with BrowserID"} 
-               [:img {"src" "/img/sign_in_blue.png" "alt" "Sign in"}]]
+               [:img {"id" "signin-img" "src" "/img/sign_in_blue.png" "alt" "Sign in"}]]
               "You are signed in!")]))

@@ -5,9 +5,9 @@
                  [noir "1.3.0-beta3"]
                  [clj-http "0.2.6"]
                  [cheshire "2.2.0"]
-                 [jayq "0.1.0-SNAPSHOT"]
-                 [crate "0.1.0-SNAPSHOT"]
-                 [fetch "0.1.0-SNAPSHOT"]]
+                 [jayq "0.1.0-alpha2"]
+                 [crate "0.1.0-alpha2"]
+                 [fetch "0.1.0-alpha2"]]
   :dev-dependencies [[lein-eclipse "1.0.0"]]
   :plugins [[lein-cljsbuild "0.1.8"]]
   :cljsbuild {

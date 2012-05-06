@@ -9,7 +9,9 @@ implementation of OpenID. You can find out more at [BrowserID Project Documentat
 Clojurescript event handling is another topic this is trying to address here. 
 * Setting up with Clojurescript with the [Clojurescript quick start](https://github.com/clojure/clojurescript/wiki/Quick-Start)
 * Dom manipulation samples [Can be found here](https://github.com/clojure/clojurescript/blob/master/samples/dom/src/dom/test.cljs)
+* Although this is not following the approach of CJS1, it's worth it to take a look at the [Clojurescript One Documentation](http://clojurescriptone.com/documentation.html)
 * More about event handling can be found at the [Clojurescript One Event Handling docs] (https://github.com/brentonashworth/one/wiki/Event-dispatching).
+* Using [Clojurescript with Noir](http://www.chris-granger.com/2012/02/20/overtone-and-clojurescript/)
 
 Finally, [Noir](https://github.com/ibdknox/webnoir) is [Chris Granger's](https://github.com/ibdknox) web development library which uses Ring and Compojure.
 

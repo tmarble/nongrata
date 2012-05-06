@@ -1,0 +1,6 @@
+#!/bin/bash
+
+lein clean, deps
+lein cljsbuild auto &
+lein run &
+

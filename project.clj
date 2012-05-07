@@ -1,7 +1,7 @@
 (defproject nongrata "0.1.0-SNAPSHOT"
   :description "Mozilla Persona (BrowserID) example using Noir and Clojurescript"
   :dependencies [[org.clojure/clojure "1.4.0"]
-                 [javax.mail/mail "1.4.2"]
+                 [org.clojure/tools.logging "0.2.3"]
                  [noir "1.3.0-beta3"]
                  [clj-http "0.2.6"]
                  [cheshire "2.2.0"]

@@ -12,7 +12,7 @@
 
 (defn gotAssertion
   [assertion]
-  (js/alert (str "callback invoked: '" assertion "'"))
+  (js/alert (str "callback invoked: |" assertion "|"))
   (if assertion
     (fm/remote (apilogin assertion) [response]
                (do
@@ -22,7 +22,7 @@
                    (js/alert "failed authentication"))))
     (js/alert "browserid.org gave us a nil response back...")))
 
-; TODO make this more jayq, less interop
+; TODO make this more jayq, less interopy
 (.bind ($ "#browserid") "click" (fn[evt] (js/alert (str "button clicked! event: " evt))
                                   (do                       
                                     navigator.id/get(gotAssertion)  

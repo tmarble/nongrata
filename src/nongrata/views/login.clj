@@ -1,4 +1,4 @@
-(ns nongrata.views.welcome
+(ns nongrata.views.login
   (:use 
     noir.fetch.remotes
     [clojure.tools.logging :only [warn]]

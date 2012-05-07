@@ -25,7 +25,7 @@
 ; TODO make this more jayq, less interopy
 (.bind ($ "#browserid") "click" (fn[evt] (js/alert (str "button clicked! event: " evt))
                                   (do                       
-                                    navigator.id/get(gotAssertion)  
+                                    (navigator.id/get gotAssertion)  
                                     false)))  
 
 (js/alert "JS evaluation reached bottom of the main.js file...")

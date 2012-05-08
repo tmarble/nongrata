@@ -12,13 +12,15 @@
 
 (defn gotAssertion
   [assertion]
-  (js/alert (str "recieved encrypted response from \nclient after asking browserid.org\n(do not show this in a normal environment)\n|" assertion "|"))
+  (js/alert (str "recieved encrypted response from \nclient after asking browserid.org\n(do not show this in a production env)\n|" assertion "|"))
   (if assertion
     (fm/remote (apilogin assertion) [response]
                (do
                  (log "response:" response)
                  (if (not (or (empty? response) (= "" response) (nil? response)))
-                   (js/alert "authenticated!")
+                   (do
+                     (log "authentication success!")
+                     (location/reload))
                    (js/alert "failed authentication"))))
     (js/alert "browserid.org gave us a nil response back...")))
 

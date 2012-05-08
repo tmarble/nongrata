@@ -3,17 +3,33 @@
 This is the live coding site for the Clojure Minnesota 5/2 meeting to better 
 understand Persona (BrowserID) and Clojure / Clojurescript (with Noir).
 
-Persona (BrowserID) aims to be a better, more usable and more privacy-conscious
-implementation of OpenID. You can find out more at [BrowserID Project Documentation at MDN](https://developer.mozilla.org/en/BrowserID#The_BrowserID_Project)
+Mozilla Persona (BrowserID) aims to be a better, more usable and more privacy-conscious
+implementation of OpenID. 
+* [BrowserID Project Documentation at MDN](https://developer.mozilla.org/en/BrowserID#The_BrowserID_Project)
+* [BrowserID Quick Setup Guide](https://developer.mozilla.org/en/BrowserID/Quick_Setup)
 
-Clojurescript event handling is another topic this is trying to address here. 
+Clojurescript, event handling and relevant client server integration with Clojure. 
 * Setting up with Clojurescript with the [Clojurescript quick start](https://github.com/clojure/clojurescript/wiki/Quick-Start)
-* Dom manipulation samples [Can be found here](https://github.com/clojure/clojurescript/blob/master/samples/dom/src/dom/test.cljs)
-* Although this is not following the approach of CJS1, it's worth it to take a look at the [Clojurescript One Documentation](http://clojurescriptone.com/documentation.html)
-* More about event handling can be found at the [Clojurescript One Event Handling docs] (https://github.com/brentonashworth/one/wiki/Event-dispatching).
+* DOM manipulation uses the excellent Clojurescript JQuery wrapper library known as [Jayq library](https://github.com/ibdknox/jayq)
+* Document markup is handled (mostly) by a client side Hiccup implementation called [Crate library](https://github.com/ibdknox/crate)
+* Ajax/Ahah XHR client-server integration is implemented using the Clojurescript [Fetch library](https://github.com/ibdknox/fetch)
 * Using [Clojurescript with Noir](http://www.chris-granger.com/2012/02/20/overtone-and-clojurescript/)
 
 Finally, [Noir](https://github.com/ibdknox/webnoir) is [Chris Granger's](https://github.com/ibdknox) web development library which uses Ring and Compojure.
+
+## Running
+
+To try it out yourself, clone this and run:
+
+```lein clean, deps, compile, cljsbuild once, run```
+
+And visit:
+
+```http://localhost:11300/login```
+
+Clicking on the sign-in image should do the dance with browserid.org.
+Once you sign in, refreshing the page should detect an authenticated
+sign-in. It could use polish, which I might do in the next few days.
 
 ## Contributors
 

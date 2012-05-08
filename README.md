@@ -21,11 +21,12 @@ Finally, [Noir](https://github.com/ibdknox/webnoir) is [Chris Granger's](https:/
 
 To try it out yourself, clone this and run:
 
-```lein clean, deps, compile, cljsbuild once, run```
+```lein clean, deps, compile, cljsbuild once, run
+```
 
 And visit:
 
-```http://localhost:11300/login```
+http://localhost:11300/login
 
 Clicking on the sign-in image should do the dance with browserid.org.
 Once you sign in, refreshing the page should detect an authenticated

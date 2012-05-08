@@ -12,7 +12,7 @@
 
 (defn gotAssertion
   [assertion]
-  (js/alert (str "callback invoked: |" assertion "|"))
+  (js/alert (str "recieved encrypted response from \nclient after asking browserid.org\n(do not show this in a normal environment)\n|" assertion "|"))
   (if assertion
     (fm/remote (apilogin assertion) [response]
                (do

@@ -21,7 +21,8 @@ Finally, [Noir](https://github.com/ibdknox/webnoir) is [Chris Granger's](https:/
 
 To try it out yourself, clone this and run:
 
-```lein clean, deps, compile, cljsbuild once, run
+```bash
+lein clean, deps, compile, cljsbuild once, run
 ```
 
 And visit:

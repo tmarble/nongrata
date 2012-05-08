@@ -11,6 +11,11 @@
     [noir.content.getting-started]
     [noir.session :as session]))
 
+(defn get-hostname 
+  "Returns the hostname of this machine. May work in some circumstances if it's what the public IP address maps to."
+  []
+  (.. java.net.InetAddress getLocalHost getHostName))
+
 (defpage login "/login" []
          (common/layout
            [:p 
@@ -31,7 +36,8 @@
 ; "{\"status\":\"okay\",\"email\":\"foo@bar.com\",\"audience\":\"localhost\",\"expires\":1336440085619,\"issuer\":\"browserid.org\"}"}
 
 (defremote apilogin [assertion]
-  (info (str "recieved assertion: " assertion "\n\nNow submitting back to browserid.org for confirmation!"))
+  (info (str "recieved assertion: " assertion "\n\nNow submitting back to browserid.org"))
+  (info (str "posting audience '" (get-hostname) "'.\nBe aware that if you're surfing the test site at a different URL, this will fail."))
   (if-let [bid-response 
            (client/post "https://browserid.org/verify"
                         {:form-params {:assertion assertion :audience "localhost"}})]

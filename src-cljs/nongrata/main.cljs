@@ -22,7 +22,7 @@
                        (= "okay" (:status response)))
                    (do
                      (log "authentication success!")
-                     (location/reload))
+                     (.reload (.-location js/window)))
                    (js/alert (str "failed authentication:\n" (:reason response))))))
     (js/alert "browserid.org gave us a nil response back...")))
 

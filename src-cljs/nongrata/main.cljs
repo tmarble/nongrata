@@ -27,7 +27,7 @@
     (js/alert "browserid.org gave us a nil response back...")))
 
 ; TODO make this more jayq, less interopy
-(.bind ($ "#browserid") "click" (fn[evt] (js/alert (str "button clicked! event: " evt))
+(.bind ($ "#browserid-link") "click" (fn[evt] (js/alert (str "button clicked! event: " evt))
                                   (do                       
                                     (navigator.id/get gotAssertion)  
                                     false)))  

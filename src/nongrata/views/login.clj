@@ -20,8 +20,8 @@
          (common/layout
            [:p 
             (if (not (session/get "browser-id"))
-              [:a#browserid-link {"href" "#" "title" "Sign-in with BrowserID"} 
-               [:img#browserid {"src" "/img/sign_in_blue.png" "alt" "Sign in"}]]
+              [:a#browserid-link {"href" "#" "title" "Sign-in with BrowserID" "class" "persona-button"} 
+               [:span "Sign in with your email"]]
               "You are signed in!")]))
 
 ; Successful response from Browser ID should look something like so:

@@ -20,8 +20,9 @@
          (common/layout
            [:p 
             (if (not (session/get "browser-id"))
+              [:div [:p "You aren't logged in. Login via Persona."]
               [:a#browserid-link {"href" "#" "title" "Sign-in with BrowserID" "class" "persona-button"} 
-               [:span "Sign in with your email"]]
+               [:span "Sign in with your email"]]]
               "You are signed in!")]))
 
 ; Successful response from Browser ID should look something like so:

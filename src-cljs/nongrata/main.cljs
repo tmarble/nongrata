@@ -12,7 +12,7 @@
 
 (defn gotAssertion
   [assertion]
-  (js/alert (str "recieved encrypted response from \nclient after asking browserid.org\n(do not show this in a production env)\n|" assertion "|"))
+  (log (str "recieved encrypted response from \nclient after asking browserid.org\n(do not show this in a production env)\n|" assertion "|"))
   (if assertion
     (fm/remote (apilogin assertion) [response]
                (do
@@ -27,10 +27,10 @@
     (js/alert "browserid.org gave us a nil response back...")))
 
 ; TODO make this more jayq, less interopy
-(.bind ($ "#browserid-link") "click" (fn[evt] (js/alert (str "button clicked! event: " evt))
+(.bind ($ "#browserid-link") "click" (fn[evt] (log (str "button clicked! event: " evt))
                                   (do                       
                                     (navigator.id/get gotAssertion)  
                                     false)))  
 
-(js/alert "JS evaluation reached bottom of the main.js file...")
+(log "JS evaluation reached bottom of the main.js file...")
 

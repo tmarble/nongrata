@@ -26,10 +26,22 @@
                    (js/alert (str "failed authentication:\n" (:reason response))))))
     (js/alert "browserid.org gave us a nil response back...")))
 
+(defn logout
+  []
+  (log "logging out now")
+  (fm/remote (logout) [response]
+             (.reload (.-location js/window))))
+
 ; TODO make this more jayq, less interopy
-(.bind ($ "#browserid-link") "click" (fn[evt] (log (str "button clicked! event: " evt))
+(.bind ($ "#browserid-link") "click" (fn[evt] (log (str "login button clicked! event: " evt))
                                   (do                       
                                     (navigator.id/get gotAssertion)  
+                                    false)))
+
+; TODO make this more jayq, less interopy
+(.bind ($ "#browserid-logout-link") "click" (fn[evt] (log (str "logout button clicked! event: " evt))
+                                  (do                       
+                                    (logout)  
                                     false)))  
 
 (log "JS evaluation reached bottom of the main.js file...")

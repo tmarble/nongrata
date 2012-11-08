@@ -17,13 +17,19 @@
   (.. java.net.InetAddress getLocalHost getHostName))
 
 (defpage login "/login" []
-         (common/layout
-           [:p 
-            (if (not (session/get "browser-id"))
-              [:div [:p "You aren't logged in. Login via Persona."]
-              [:a#browserid-link {"href" "#" "title" "Sign-in with BrowserID" "class" "persona-button"} 
-               [:span "Sign in with your email"]]]
-              "You are signed in!")]))
+  (common/layout
+    [:p 
+     (if (not (session/get "browser-id"))
+       [:div [:p "You aren't logged in. Login via Persona."]
+        [:a#browserid-link {"href" "#" "title" "Sign-in with BrowserID" "class" "persona-button"} 
+         [:span "Sign in with your email"]]
+        [:a#browserid-logout-link {"href" "#" "title" "Log out" "class" "persona-button noshow"} 
+         [:span "Log out"]]]
+       [:div [:p "You are signed in!"]
+        [:a#browserid-link {"href" "#" "title" "Sign-in with BrowserID" "class" "persona-button noshow"} 
+         [:span "Sign in with your email"]]
+        [:a#browserid-logout-link {"href" "#" "title" "Log out" "class" "persona-button"} 
+         [:span "Log out"]]])]))
 
 ; Successful response from Browser ID should look something like so:
 ;{:status 200 
@@ -59,3 +65,7 @@
     (do
       (error "document contains no response")
       {:status "error no data"})))
+
+(defremote logout []
+  (info "received logout request")
+  (session/put! "browser-id" nil))

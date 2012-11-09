@@ -40,20 +40,20 @@
 ;  "connection" "close", 
 ;  "content-length" "121"}, 
 ; :body 
-; "{\"status\":\"okay\",\"email\":\"foo@bar.com\",\"audience\":\"localhost\",\"expires\":1336440085619,\"issuer\":\"browserid.org\"}"}
+; "{\"status\":\"okay\",\"email\":\"foo@bar.com\",\"audience\":\"localhost\",\"expires\":1336440085619,\"issuer\":\"login.persona.org\"}"}
 
 (defremote apilogin [assertion]
-  (info (str "recieved assertion: " assertion "\n\nNow submitting back to browserid.org"))
+  (info (str "recieved assertion: " assertion "\n\nNow submitting back to login.persona.org"))
   (info (str "posting audience '" (get-hostname) "'.\nBe aware that if you're surfing the test site at a different URL, this will fail."))
   (if-let [bid-response 
-           (client/post "https://browserid.org/verify"
+           (client/post "https://verifier.login.persona.org/verify"
                         {:form-params {:assertion assertion :audience "localhost"}})]
     (do
       (info (str "got response from browser id: " bid-response))
       (let [body-map (read-json (:body bid-response))]
         (if (= 200 (:status bid-response))
           (do
-            (info (str "HTTP 200 OK from browserid.org: " body-map))
+            (info (str "HTTP 200 OK from login.persona.org: " body-map))
             (if (= "okay" (:status body-map))
               (do 
                 (info "Status: okay, creating authenticated user session...")

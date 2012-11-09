@@ -5,8 +5,8 @@ understand Persona (BrowserID) and Clojure / Clojurescript (with Noir).
 
 Mozilla Persona (BrowserID) aims to be a better, more usable and more privacy-conscious
 implementation of OpenID. 
-* [BrowserID Project Documentation at MDN](https://developer.mozilla.org/en/BrowserID#The_BrowserID_Project)
-* [BrowserID Quick Setup Guide](https://developer.mozilla.org/en/BrowserID/Quick_Setup)
+* [Persona Project Documentation at MDN](https://developer.mozilla.org/en-US/docs/Persona)
+* [Persona Quick Setup Guide](https://developer.mozilla.org/en-US/docs/Persona/Quick_Setup)
 
 Clojurescript, event handling and relevant client server integration with Clojure. 
 * Setting up with Clojurescript with the [Clojurescript quick start](https://github.com/clojure/clojurescript/wiki/Quick-Start)
@@ -29,7 +29,7 @@ And visit:
 
 http://localhost:11300/login
 
-Clicking on the sign-in image should do the dance with browserid.org.
+Clicking on the sign-in image should do the dance with login.persona.org.
 Once you sign in, refreshing the page should detect an authenticated
 sign-in. It could use polish, which I might do in the next few days.
 

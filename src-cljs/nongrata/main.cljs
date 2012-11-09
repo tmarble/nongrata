@@ -12,7 +12,7 @@
 
 (defn gotAssertion
   [assertion]
-  (log (str "recieved encrypted response from \nclient after asking browserid.org\n(do not show this in a production env)\n|" assertion "|"))
+  (log (str "recieved encrypted response from \nclient after asking login.persona.org\n(do not show this in a production env)\n|" assertion "|"))
   (if assertion
     (fm/remote (apilogin assertion) [response]
                (do
@@ -24,7 +24,7 @@
                      (log "authentication success!")
                      (.reload (.-location js/window)))
                    (js/alert (str "failed authentication:\n" (:reason response))))))
-    (js/alert "browserid.org gave us a nil response back...")))
+    (js/alert "login.persona.org gave us a nil response back...")))
 
 (defn logout
   []

@@ -50,7 +50,8 @@
   (info (str "posting audience '" (get-hostname) "'.\nBe aware that if you're surfing the test site at a different URL, this will fail."))
   (if-let [bid-response
            (client/post "https://verifier.login.persona.org/verify"
-                        {:form-params {:assertion assertion :audience "localhost"}})]
+                        {:form-params {:assertion assertion
+                                       :audience (get-hostname)}})]
     (do
       (info (str "got response from browser id: " bid-response))
       (let [body-map (read-json (:body bid-response))]

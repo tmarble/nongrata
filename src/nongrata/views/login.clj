@@ -16,7 +16,7 @@
   []
   (let [hostname (.. java.net.InetAddress getLocalHost getHostName)]
     (if (= hostname "roku")
-      "info.net" ;; special case
+      "info9.net" ;; special case
       hostname)))
 
 (defpage login "/login" []
